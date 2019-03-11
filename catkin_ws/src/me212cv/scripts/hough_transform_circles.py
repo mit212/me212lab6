@@ -2,6 +2,8 @@
 
 # 2.12 Lab 4 object detection: a node for de-noising
 # Luke Roberto Oct 2017
+# Jacob Guggenheim March 2019  
+# Jerry Ng March 2019
 
 import rospy
 import numpy as np
