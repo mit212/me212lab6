@@ -43,8 +43,10 @@ def rosHTransformCallback(msg):
     gray = cv2.cvtColor(cv_image,cv2.COLOR_BGR2GRAY)  # Convert to grascale image
     cv2.imshow("Gray_Image", gray)
     cv2.waitKey(3) 
-    
-    edges = cv2.Canny(gray,10,500,apertureSize = 3)   # Canny edge detector to make it easier for hough transform to "agree" on lines
+    #TODO: Play with these parameters
+    lower_threshold = 10
+    upper_threshold = 500
+    edges = cv2.Canny(gray,lower_threshold,upper_threshold,apertureSize = 3)   # Canny edge detector to make it easier for hough transform to "agree" on lines
     cv2.imshow("Canny_Image", edges)
     cv2.waitKey(3) 
 
